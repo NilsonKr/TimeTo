@@ -1,0 +1,24 @@
+{
+  "name": "timeto",
+  "version": "1.0.0",
+  "description": "Little application to check the remain time for something",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NilsonKr/TimeTo.git"
+  },
+  "keywords": [
+    "Javascript",
+    "sass",
+    "html"
+  ],
+  "author": "@nilsonkr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NilsonKr/TimeTo/issues"
+  },
+  "homepage": "https://github.com/NilsonKr/TimeTo#readme"
+}

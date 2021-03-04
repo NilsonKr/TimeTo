@@ -1,0 +1,139 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: -webkit-gradient(linear, left bottom, left top, from(#3fa1dd), color-stop(82%, #530858));
+  background: linear-gradient(0deg, #3fa1dd 0%, #530858 82%);
+  color: #FFF;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.recommend--logo {
+  width: 50px;
+}
+
+.petro--picture {
+  width: 60px;
+  border-radius: 50%;
+}
+
+.header {
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.header h2 {
+  font-size: 2.5rem;
+  font-family: "Oleo Script", cursive;
+  text-shadow: 0 0 8px #000;
+}
+
+.app {
+  width: clamp(280px, 90%, 580px);
+  min-height: 600px;
+  margin: 50px auto 0 auto;
+  padding: 10px;
+  border: 3px solid #FFF;
+  border-radius: 10px;
+}
+
+.app .legend {
+  margin: 0 auto;
+  padding: 0 10px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.app__container {
+  min-height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.app__container .app__title {
+  font-size: 1.5rem;
+  text-align: center;
+  text-shadow: 0 0 8px #000;
+}
+
+.form__date {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.form__date label {
+  position: relative;
+}
+
+.form__date span {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  font-weight: bold;
+  opacity: 0;
+  -webkit-transition: .5s opacity;
+  transition: .5s opacity;
+}
+
+.form__date input {
+  max-width: 45px;
+  height: 50px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  border-left: 2px solid #FFF;
+  border-bottom: 2px solid #FFF;
+  border-right: 2px solid #FFF;
+  background-color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  font-size: 1.1rem;
+  color: #FFF;
+  font-weight: bold;
+}
+
+.form__date input:focus + span {
+  opacity: 1;
+}
+
+.form__date input::-webkit-input-placeholder {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #FFF;
+  font-weight: bold;
+}
+
+.send--button {
+  position: relative;
+  padding: 10px 15px;
+  outline: none;
+  border: 2px solid #FFF;
+  border-radius: 25px;
+  background: #49aacc;
+  color: #FFF;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */

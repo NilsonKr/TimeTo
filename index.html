@@ -5,9 +5,72 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TimeTo</title>
+  <!-- styles -->
+  <link rel="stylesheet" href="./styles/style.css">
+  <!-- Webfonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-  
+  <header class="header">
+    <h2>TimeTo?</h2>
+  </header>
+  <main>
+    <fieldset class="app">
+      <legend class="legend">TimeTo</legend>
+      <div class="app__container">
+        <h2 class="app__title">Set a date!</h2>
+        <form action="" class="form__date">
+          <label class="year" for="year">
+            <input type="number" name="year" placeholder="00">
+            <span class="placeHolder"> Year</span>
+          </label>
+          <label class="month"for="month">
+            <input type="number" name="month" placeholder="00">
+            <span class="placeHolder"> Month</span>
+          </label>
+          <label class="day" for="day">
+            <input type="number" name="day" placeholder="00">
+            <span class="placeHolder"> Day</span>
+          </label>
+          <label for="hour" class="hour">
+            <input type="number" name="hour" placeholder="00">
+            <span class="placeHolder"> Hour</span>
+          </label>
+          <label for="hour" class="time">
+            <input type="text" name="time" placeholder="PM">
+            <span class="placeHolder"> Time</span>
+          </label>
+        </form>
+        <button class="send--button">See Remain Time 👀</button>
+        <div class="recommends">
+          <div class="petro__card">
+            <img src="./assets/petro.jpg" alt="Petro Picture" class="recommend--logo petro--picture">
+            <div class="details">
+              <h2>Petro Be President</h2>
+              <p>00:00:00:00:00</p>
+            </div>
+          </div>
+          <div class="birthday__card">
+            <img src="./assets/birthday-cake.svg" alt="Petro Picture" class="recommend--logo">
+            <div class="details">
+              <h2>Creator's Birthday</h2>
+              <p>00:00:00:00:00</p>
+            </div>
+          </div>
+          <div class="love__card">
+            <img src="./assets/favourite.svg" alt="Petro Picture" class="recommend--logo">
+            <div class="details">
+              <h2>Meet Your love</h2>
+              <p>00:00:00:00:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </main>
   <script src="./main.js"></script>
 </body>
 </html>
