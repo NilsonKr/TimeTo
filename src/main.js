@@ -1,27 +1,24 @@
-const today = new Date()
-const monthDays = [31,28,31,30,31,30,31,31,30,31,30,31]
+import RemainData  from './utils/remainData.js';
+
+const year = document.querySelector('#yearInput')
+const month = document.querySelector('#monthInput')
+const day = document.querySelector('#dayInput')
+const hour = document.querySelector('#hourInput')
+const time = document.querySelector('#timeInput')
+
+const sendBtn = document.querySelector('#send')
 
 
 
+document.body.addEventListener('click', ev => {
+  const target = ev.target
 
-function remain(limit){
-    const remain = (Math.floor(limit - today) / 1000)
-    const remainSecs = ('0' + Math.floor(remain % 60)).slice(-2)
-    const remainMinutes = ('0' + Math.floor(remain / 60 % 60)).slice(-2)
-    const remainHours = ('0' + Math.floor(remain / 3600 % 24)).slice(-2)
-    const remainDays = Math.floor(remain / (3600 * 24) % 30)
-    const remainMonths = Math.floor(remain / (3600 * 24 * 30) % 12 )
-    const remainYears = Math.floor(remain / (3600 * 24 * 30 * 12) )
-    // const remainMonths = Math.floor()
+  if(target.id === 'send'){
+    sendBtn.classList.add('')
+  }
+})
 
-    return {
-      remainSecs,
-      remainMinutes,
-      remainHours,
-      remainDays,
-      remainMonths,
-      remainYears,
-    }
-}
+
+// const calcDate = new RemainData({display: 'Display', date: new Date(2021,4,10,24,30,20)})
 
 

@@ -25,27 +25,27 @@
         <h2 class="app__title">Set a date!</h2>
         <form action="" class="form__date">
           <label class="year" for="year">
-            <input type="number" name="year" placeholder="00">
+            <input type="number" name="year" placeholder="00" id="yearInput">
             <span class="placeHolder"> Year</span>
           </label>
           <label class="month"for="month">
-            <input type="number" name="month" placeholder="00">
+            <input type="number" name="month" placeholder="00" id="monthInput">
             <span class="placeHolder"> Month</span>
           </label>
           <label class="day" for="day">
-            <input type="number" name="day" placeholder="00">
+            <input type="number" name="day" placeholder="00" id="dayInput">
             <span class="placeHolder"> Day</span>
           </label>
           <label for="hour" class="hour">
-            <input type="number" name="hour" placeholder="00">
+            <input type="number" name="hour" placeholder="00" id="hourInput">
             <span class="placeHolder"> Hour</span>
           </label>
-          <label for="hour" class="time">
-            <input type="text" name="time" placeholder="PM">
+          <label for="time" class="time">
+            <input type="text" name="time" placeholder="PM" id="timeInput">
             <span class="placeHolder"> Time</span>
           </label>
         </form>
-        <button class="send--button">See Remain Time 👀</button>
+        <button class="send--button" id="send">See Remain Time 👀</button>
         <div class="recommends">
           <div class="petro__card card">
             <img src="./assets/petro.jpg" alt="Petro Picture" class="recommend--logo petro--picture">
@@ -73,13 +73,22 @@
     </fieldset>
   </main>
   <div class="coffe">
-
-  </div>
-  <script src="./main.js"></script>
-  <div class="coffe">
     <a href="https://www.buymeacoffee.com/nilsonkr" target="_blank">
       <img src="https://cdn.buymeacoffee.com/buttons/v2/default-white.png" alt="Buy Me A Coffee" style="height: 50px !important;width: 190px !important;" >
     </a>
   </div>
+  <div class="modal__container">
+    <div class="modal">
+      <div class="modal__details">
+        <img class="modal--close" src="./assets/close.svg" alt="Close Button">
+        <img src="./assets/stopwatch.svg" alt="stopwatch image">
+        <div class="countDown">
+          <h2>Still Left</h2>
+          <p>00:00:00:00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="./src/main.js"></script>
 </body>
 </html>
