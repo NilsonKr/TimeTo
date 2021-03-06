@@ -1,7 +1,8 @@
+import monthDays from './utils/monthDays.js';
+
 class RemainData {
   constructor(config){
     this.now = new Date()
-    this.monthDays =  [31,28,31,30,31,30,31,31,30,31,30,31]
     // this.display = config.display
     this.newDate = config.date
 

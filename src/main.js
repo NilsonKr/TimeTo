@@ -1,6 +1,7 @@
 import RemainData  from './utils/remainData.js';
 import Validate from './utils/validate.js';
 
+
 const year = document.querySelector('#yearInput')
 const month = document.querySelector('#monthInput')
 const day = document.querySelector('#dayInput')

@@ -1,3 +1,5 @@
+import monthDays from './utils/monthDays.js';
+
 class Validate {
   constructor(config){
     this.values = config.values
