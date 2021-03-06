@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/NilsonKr/TimeTo/issues"
   },
-  "homepage": "https://github.com/NilsonKr/TimeTo#readme"
+  "homepage": "https://github.com/NilsonKr/TimeTo#readme",
+  "dependencies": {
+    "animate.css": "^4.1.1"
+  },
+  "devDependencies": {}
 }

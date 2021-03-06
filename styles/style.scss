@@ -217,13 +217,13 @@ body{
   left: 0;
   bottom: 0;
   z-index: map-get($map: $zIndex, $key: background);
-  background-color: get-opacity( $secondary-color,.5 );
+  background-color: get-opacity( $secondary-color,.7 );
 }
 
 .modal{
-  height: 50%;
+  height: 35%;
   width: clamp(300px,100%,580px);
-  padding: 10px;
+  padding: 5px;
   background-color: $primary-color;
   border-radius: 10px;
 } 

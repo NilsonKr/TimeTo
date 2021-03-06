@@ -7,15 +7,32 @@ const hour = document.querySelector('#hourInput')
 const time = document.querySelector('#timeInput')
 
 const sendBtn = document.querySelector('#send')
+const modal = document.querySelector('#modal')
 
 
 
 document.body.addEventListener('click', ev => {
   const target = ev.target
 
+
   if(target.id === 'send'){
-    sendBtn.classList.add('')
+    const values = [year.value, month.value, day.value, hour.value, time.value]
+    sendBtn.classList.add('animation')
+
+    console.log(new Date(year.value, month.value, day.value, hour.value, time.value))
+
+    // setTimeout(() =>{ 
+    //   modal.style.display = 'flex'
+    //   modal.classList.add('animate__fadeInDownBig')
+    // }, 1000)
+    setTimeout(() => sendBtn.classList.remove('animation'), 3000 )
   }
+
+  if(target.classList.contains('modal__container') || target.classList.contains('modal--close')){
+
+    modal.style.display = 'none'
+  }
+
 })
 
 
