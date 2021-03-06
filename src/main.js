@@ -1,4 +1,5 @@
 import RemainData  from './utils/remainData.js';
+import Validate from './utils/validate.js';
 
 const year = document.querySelector('#yearInput')
 const month = document.querySelector('#monthInput')
@@ -16,10 +17,10 @@ document.body.addEventListener('click', ev => {
 
 
   if(target.id === 'send'){
-    const values = [year.value, month.value, day.value, hour.value, time.value]
+    const value = [year.value, parseInt(month.value) - 1, day.value, hour.value]
     sendBtn.classList.add('animation')
 
-    console.log(new Date(year.value, month.value, day.value, hour.value, time.value))
+    new Validate({values : value, time : time.value})
 
     // setTimeout(() =>{ 
     //   modal.style.display = 'flex'

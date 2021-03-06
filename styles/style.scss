@@ -1,19 +1,27 @@
-$background-gradient: linear-gradient(0deg, rgba(63,161,221,1) 0%, rgba(83,8,88,1) 82%);
-$border-gradient: linear-gradient(90deg, rgba(97,19,77,1) 0%, rgba(114,9,121,1) 31%, rgba(73,170,204,1) 100%);
-$primary-color: #FFF;
+$background-gradient: linear-gradient(
+  0deg,
+  rgba(63, 161, 221, 1) 0%,
+  rgba(83, 8, 88, 1) 82%
+);
+$border-gradient: linear-gradient(
+  90deg,
+  rgba(97, 19, 77, 1) 0%,
+  rgba(114, 9, 121, 1) 31%,
+  rgba(73, 170, 204, 1) 100%
+);
+$primary-color: #fff;
 $secondary-color: #000;
-$special-color: rgba(73,170,204,1);
-$main-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-$secondary-font: 'Oleo Script', cursive;
+$special-color: rgba(73, 170, 204, 1);
+$main-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$secondary-font: "Oleo Script", cursive;
 
 $zIndex: (
   modal: 3,
   background: 2,
-  normal: 1
+  normal: 1,
 );
 
-
-@mixin inputDate{
+@mixin inputDate {
   max-width: 45px;
   height: 50px;
   outline: none;
@@ -22,116 +30,112 @@ $zIndex: (
   border-left: 2px solid $primary-color;
   border-bottom: 2px solid $primary-color;
   border-right: 2px solid $primary-color;
-  background-color: rgba($primary-color,.4);
+  background-color: rgba($primary-color, 0.4);
 }
 
-@function get-opacity($color,$opacity){
-    @return rgba($color,$opacity)
+@function get-opacity($color, $opacity) {
+  @return rgba($color, $opacity);
 }
 
-
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body{
+body {
   position: relative;
   height: 100vh;
-  background:$background-gradient ;
+  background: $background-gradient;
   color: $primary-color;
   font-family: $main-font;
-
 }
 
-
-.header{
+.header {
   width: 100%;
-  padding: 10px 0 ;
+  padding: 10px 0;
   text-align: center;
   // background: get-opacity( $primary-color, .05);
 
-    h2{
-      font-size: 2.5rem;
-      font-family: $secondary-font;
-      text-shadow: 0 0 8px  $secondary-color;
-    }
+  h2 {
+    font-size: 2.5rem;
+    font-family: $secondary-font;
+    text-shadow: 0 0 8px $secondary-color;
+  }
 }
 .explain {
   text-align: center;
-  color: get-opacity($primary-color,.6 )
+  color: get-opacity($primary-color, 0.6);
 }
 
-.app{
-  width: clamp(280px,90%,580px);
+.app {
+  width: clamp(280px, 90%, 580px);
   min-height: 600px;
   margin: 50px auto 0 auto;
   padding: 10px;
   border: 3px solid $primary-color;
   border-radius: 10px;
 
-    .legend{
-      margin: 0 auto;
-      padding: 0 10px;
-      font-size: 2rem;
-      font-weight: bold;
-    }
+  .legend {
+    margin: 0 auto;
+    padding: 0 10px;
+    font-size: 2rem;
+    font-weight: bold;
+  }
 }
 
-.app__container{
+.app__container {
   min-height: 500px;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: space-around;
 
-  .app__title{
+  .app__title {
     font-size: 1.5rem;
     text-align: center;
-    text-shadow: 0 0 8px  $secondary-color;
+    text-shadow: 0 0 8px $secondary-color;
   }
 }
 
-.form__date{
+.form__date {
   // margin: 40px 0 ;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
 
-    label{
-      position: relative;
-    }
-    
+  label {
+    position: relative;
+  }
 
-    span{
-      position: absolute;
-      left: 50%;
-      bottom: 100%;
-      transform: translate(-50%, 0);
-      font-weight: bold;
-      opacity: 0;
-      transition: .5s opacity;
-    }
+  span {
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translate(-50%, 0);
+    font-weight: bold;
+    opacity: 0;
+    transition: 0.5s opacity;
+  }
 
-    input{
-      @include inputDate;
-      text-align: center;
-      font-size: 1.1rem;
-      color: $primary-color;
-      font-weight: bold;
-    }
-    input:focus + span{
-      opacity: 1;
-    }
-    input::-webkit-input-placeholder{
-      text-align: center;
-      font-size: 1.1rem;
-      color: $primary-color;
-      font-weight: bold;
-    }
+  input {
+    @include inputDate;
+    text-align: center;
+    font-size: 1.1rem;
+    color: $primary-color;
+    font-weight: bold;
+  }
+  input:focus + span {
+    opacity: 1;
+  }
+  input::-webkit-input-placeholder {
+    text-align: center;
+    font-size: 1.1rem;
+    color: $primary-color;
+    font-weight: bold;
+  }
 }
-.send--button{
+.send--button {
   position: relative;
   padding: 10px 15px;
   outline: none;
@@ -141,16 +145,13 @@ body{
   color: $primary-color;
   font-size: 1.1rem;
   font-weight: bold;
-
-    
 }
 
-.animation{
-  animation: bounce 1.8s ;
+.animation {
+  animation: bounce 1.8s;
 }
 
-
-.recommends{
+.recommends {
   min-height: 200px;
   display: flex;
   flex-flow: column;
@@ -158,56 +159,55 @@ body{
   justify-content: space-between;
 }
 
-.card{
+.card {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 5px;
   border-radius: 7px;
-  box-shadow: 3px 5px 0 get-opacity($primary-color, .4);
+  box-shadow: 3px 5px 0 get-opacity($primary-color, 0.4);
   color: $secondary-color;
   background-color: $primary-color;
 
-  .recommend--logo{
+  .recommend--logo {
     width: 30px;
     margin-right: 10px;
   }
-  
-  .petro--picture{
+
+  .petro--picture {
     width: 45px;
     border-radius: 50%;
   }
-    .details{
-      text-align: center;
-        
+  .details {
+    text-align: center;
 
-        h2{
-          font-size: 1.2rem;
-        }
-        p{
-          font-size: 1rem;
-          color: get-opacity($secondary-color, .4)
-        }
+    h2 {
+      font-size: 1.2rem;
     }
+    p {
+      font-size: 1rem;
+      color: get-opacity($secondary-color, 0.4);
+    }
+  }
 }
 
-.coffe{
+.coffe {
   background-color: $primary-color;
   padding: 5px;
   position: absolute;
   right: 10px;
   bottom: 20px;
-  border-radius: 10px ;
+  border-radius: 10px;
   animation: bounce 2s infinite ease-in-out;
 
-    img{
-      border: 1px solid black;
-      vertical-align: middle;
-      border-radius: 5px ;
-    }
+  img {
+    border: 1px solid black;
+    vertical-align: middle;
+    border-radius: 5px;
+  }
 }
 
-.modal__container{
+.modal__container {
   display: none;
   position: absolute;
   align-items: center;
@@ -217,22 +217,23 @@ body{
   left: 0;
   bottom: 0;
   z-index: map-get($map: $zIndex, $key: background);
-  background-color: get-opacity( $secondary-color,.7 );
+  background-color: get-opacity($secondary-color, 0.7);
 }
 
-.modal{
+.modal {
   height: 35%;
-  width: clamp(300px,100%,580px);
+  width: clamp(300px, 100%, 580px);
   padding: 5px;
   background-color: $primary-color;
   border-radius: 10px;
-} 
+}
 
-.modal__details{
+.modal__details {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  padding: 5px;
   width: 100%;
   height: 100%;
   text-align: center;
@@ -240,31 +241,41 @@ body{
   border-radius: 5px;
   color: $secondary-color;
 
-  .modal--close{
+  .modal--close {
     position: absolute;
-    top: 10px ;
+    top: 10px;
     right: 10px;
     width: 30px;
   }
 
-  img{
+  img {
     width: 60px;
   }
 
-  h2{
+  h2 {
     color: $special-color;
     font-size: 2.5rem;
     font-weight: bold;
   }
 
-  p{
+  p {
     font-size: 1.5rem;
-    color: get-opacity( $secondary-color, .5);
+    color: get-opacity($secondary-color, 0.5);
   }
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-  40% {transform: translateY(-20px);}
-  60% {transform: translateY(-15px);}
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }
