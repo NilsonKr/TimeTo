@@ -27,6 +27,7 @@ class RemainData {
       remainDays,
       remainMonths,
       remainYears,
+      remain
     }
 }
 
