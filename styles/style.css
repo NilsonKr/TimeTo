@@ -197,6 +197,10 @@ body {
   color: rgba(0, 0, 0, 0.4);
 }
 
+.love__card {
+  padding: 10px;
+}
+
 .coffe {
   background-color: #fff;
   padding: 5px;

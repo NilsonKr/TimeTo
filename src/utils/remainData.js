@@ -1,41 +1,6 @@
-import monthDays from './monthDays.js';
 
-class RemainData {
-  constructor(config){
-    this.newDate = config.date
-
-
-    this.modal =  document.querySelector('#modal')
-    this.dateText = document.querySelector('#dateText')
-    this.dateText.style.fontSize = '1rem'
-    this.text = document.querySelector('#textModal')
-    this.text.textContent = 'Still Left'
-    this.text.style.fontSize = '2.5rem'
-    document.querySelector('#modalImage').src ="./assets/stopwatch.svg"
-
-
-    // console.log(this.newDate,data)
-    this.render()
-  }
-
-  render(){
-    setTimeout(() => {
-      this.modal.style.display = 'flex'
-      this.modal.classList.add('animate__fadeInDownBig')
-      this.update()
-    }, 1000)
-  }
-
-  update(){
-   const interval = setInterval(() => {
-      const data = this.remain(this.newDate)   
-
-      this.dateText.innerText = `${data.remainYears}y : ${data.remainMonths}m : ${data.remainDays}d : ${data.remainHours}h : ${data.remainMinutes}m : ${data.remainSecs}s`
-
-      if(this.modal.style.display === 'none'){
-        clearInterval(interval)
-      }
-    },1000)
+class RemainData{
+  constructor(){
   }
 
   remain(limit){
@@ -59,8 +24,84 @@ class RemainData {
       remainYears,
       remain
     }
-}
+  }
 
 }
 
-export default RemainData
+class updateModal extends RemainData{
+  constructor(config){
+    super();
+    this.newDate = config.date
+    this.modal =  document.querySelector('#modal')
+    this.dateText = document.querySelector('#dateText')
+    this.dateText.style.fontSize = '1rem'
+    this.text = document.querySelector('#textModal')
+    this.text.textContent = 'Still Left'
+    this.text.style.fontSize = '2.5rem'
+    document.querySelector('#modalImage').src ="./assets/stopwatch.svg"
+    // console.log(this.newDate,data)
+    this.render()
+  }
+
+  render(){
+    setTimeout(() => {
+      this.modal.style.display = 'flex'
+      this.modal.classList.add('animate__fadeInDownBig')
+      this.update(this.dateText)
+    }, 1000)
+  }
+  
+  update(display){
+    const interval = setInterval(() => {
+       const data = this.remain(this.newDate)   
+ 
+       display.innerText = `${data.remainYears}y : ${data.remainMonths}m : ${data.remainDays}d : ${data.remainHours}h : ${data.remainMinutes}m : ${data.remainSecs}s`
+ 
+       if(this.modal.style.display === 'none'){
+         clearInterval(interval)
+       }
+     },1000)
+   }
+}
+
+class UpdateCard extends RemainData{
+  constructor(){
+    super();
+    this.presidentDate = document.querySelector('#presidentDate')
+    this.presidentDate.style.fontSize = '.9rem'
+    this.birthDate = document.querySelector('#birthDate')
+    this.birthDate.style.fontSize = '.9rem'
+
+
+    this.presidentLimit = new Date(2022,4,29,0)
+    this.birthLimit = new Date(2021,4,10,0)
+
+
+    this.updatePresidentCard()
+    this.updateBirthCard()
+  }
+  updateBirthCard(){
+    this.update(this.birthDate, this.birthLimit)
+
+  }
+
+  updatePresidentCard(){
+    this.update(this.presidentDate, this.presidentLimit)
+  }
+
+  update(display, limit){
+    const interval = setInterval(() => {
+       const data = this.remain(limit)   
+ 
+       display.innerText = `${data.remainYears}y: ${data.remainMonths}m: ${data.remainDays}d: ${data.remainHours}h: ${data.remainMinutes}m: ${data.remainSecs}s`
+ 
+       if(data.remain < 1){
+         display.innerText = `Now !`
+         clearInterval(interval)
+       }
+     },1000)
+   }
+}
+
+export { UpdateCard }
+export default updateModal
