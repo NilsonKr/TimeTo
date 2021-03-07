@@ -131,7 +131,7 @@ body {
   input::-webkit-input-placeholder {
     text-align: center;
     font-size: 1.1rem;
-    color: $primary-color;
+    color: get-opacity($primary-color, 0.7);
     font-weight: bold;
   }
 }
