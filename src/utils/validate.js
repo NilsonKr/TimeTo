@@ -65,7 +65,7 @@ class Validate {
 
       const date = new Date(this.year,this.month,this.day,realHour)
 
-      new RemainData({date,})
+      new RemainData({date, })
     }
   }
   getExactHour(){
