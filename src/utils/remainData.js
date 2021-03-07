@@ -1,4 +1,4 @@
-import monthDays from './utils/monthDays.js';
+import monthDays from './monthDays.js';
 
 class RemainData {
   constructor(config){

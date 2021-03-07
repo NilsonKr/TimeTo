@@ -18,7 +18,7 @@ document.body.addEventListener('click', ev => {
 
 
   if(target.id === 'send'){
-    const value = [year.value, parseInt(month.value) - 1, day.value, hour.value]
+    const value = [year.value, month.value, day.value, hour.value]
     sendBtn.classList.add('animation')
 
     new Validate({values : value, time : time.value})

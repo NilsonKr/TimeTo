@@ -1,12 +1,12 @@
-import monthDays from './utils/monthDays.js';
+import monthDays from './monthDays.js';
 
 class Validate {
   constructor(config){
     this.values = config.values
     this.year = config.values[0]
-    this.month = config.values[1]
-    this.day = config.values[2]
-    this.hour = config.values[3]
+    this.month = parseInt(config.values[1]) - 1
+    this.day = parseInt(config.values[2])
+    this.hour = parseInt(config.values[3])
     
 
     this.time = config.time
@@ -18,19 +18,15 @@ class Validate {
     this.modalImg = document.querySelector('#modalImage')
 
     this.dateRight()    
+
+    console.log(this.month, this.day, this.hour)
   }
 
   dateRight(){
    if(this.values.includes("") || this.values.includes(NaN)){
-    this.text.innerText = 'Oh oH Wrong Date!! Try Again'
-    this.modalImg.src = './assets/error.svg'
-
-    setTimeout(() => {
-      this.modal.style.display = 'flex'
-      this.modal.classList.add('animate__fadeInDownBig')
-    }, 1000)
+    this.throwError('Oh oH Wrong Date! Try Again')
   }else{
-      this.validateDays()
+    this.validateDays()
   }
   // console.log(this.values)
 
@@ -39,10 +35,13 @@ class Validate {
   validateDays(){
     switch(true){
       case this.month > 11:
-        console.log('Month Wrong')
+        this.throwError('Oh oH Wrong Month! Check It')
       break;
-      case this.month > 11:
-        console.log('Month Wrong')
+      case this.day > monthDays[this.month]:
+        this.throwError('Oh oH Wrong Day! Check It')
+      break;
+      case this.hour > 12:
+        this.throwError('Oh oH Wrong Hour! Check It')
       break;
       default:
         console.log('Heyy') 
@@ -57,6 +56,16 @@ class Validate {
       console.log('Its Right')
       console.log(validation)
     }
+  }
+
+  throwError(errorMsg){
+    this.text.innerText = errorMsg
+    this.modalImg.src = './assets/error.svg'
+
+    setTimeout(() => {
+      this.modal.style.display = 'flex'
+      this.modal.classList.add('animate__fadeInDownBig')
+    }, 1000)
   }
 }
 
