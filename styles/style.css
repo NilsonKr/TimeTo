@@ -33,7 +33,7 @@ body {
 
 .app {
   width: clamp(280px, 90%, 580px);
-  min-height: 600px;
+  min-height: 700px;
   margin: 50px auto 0 auto;
   padding: 10px;
   border: 3px solid #fff;
@@ -48,7 +48,7 @@ body {
 }
 
 .app__container {
-  min-height: 500px;
+  min-height: 550px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,6 +77,9 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  padding: 20px 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #fff;
 }
 
 .form__date label {
@@ -168,6 +171,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 5px;
+  margin-bottom: 15px;
   border-radius: 7px;
   -webkit-box-shadow: 3px 5px 0 rgba(255, 255, 255, 0.4);
           box-shadow: 3px 5px 0 rgba(255, 255, 255, 0.4);
