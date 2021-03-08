@@ -43,6 +43,8 @@ document.body.addEventListener('click', ev => {
 function deployModal(text,img){
   const modalImg =  document.querySelector('#modalImage')
   const textModal = document.querySelector('#textModal')
+  const timeModal = document.querySelector('#dateText')
+  timeModal.innerText = ' '
   textModal.style.fontSize = '1.5rem'
 
   textModal.innerText = text
