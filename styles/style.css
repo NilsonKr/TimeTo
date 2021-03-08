@@ -7,7 +7,7 @@
 
 body {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background: -webkit-gradient(linear, left bottom, left top, from(#3fa1dd), color-stop(82%, #530858));
   background: linear-gradient(0deg, #3fa1dd 0%, #530858 82%);
   color: #fff;
@@ -198,9 +198,23 @@ body {
   color: rgba(0, 0, 0, 0.4);
 }
 
+.madeBy {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-top: 10px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
 .love__card {
   padding: 10px;
   cursor: pointer;
+}
+
+.footer {
+  position: relative;
+  min-height: 80px;
+  margin-top: 30px;
 }
 
 .coffe {
@@ -208,7 +222,7 @@ body {
   padding: 5px;
   position: absolute;
   right: 10px;
-  bottom: 20px;
+  bottom: 0px;
   border-radius: 10px;
   -webkit-animation: bounce 2s infinite ease-in-out;
           animation: bounce 2s infinite ease-in-out;

@@ -45,7 +45,7 @@ $zIndex: (
 
 body {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background: $background-gradient;
   color: $primary-color;
   font-family: $main-font;
@@ -191,10 +191,23 @@ body {
     }
   }
 }
+.madeBy {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-top: 10px;
+  color: get-opacity($secondary-color, 0.6);
+}
 
 .love__card {
   padding: 10px;
   cursor: pointer;
+}
+
+.footer {
+  position: relative;
+  min-height: 80px;
+  margin-top: 30px;
 }
 
 .coffe {
@@ -202,7 +215,7 @@ body {
   padding: 5px;
   position: absolute;
   right: 10px;
-  bottom: 20px;
+  bottom: 0px;
   border-radius: 10px;
   animation: bounce 2s infinite ease-in-out;
 
