@@ -71,32 +71,41 @@ class UpdateCard extends RemainData{
     this.presidentDate.style.fontSize = '.9rem'
     this.birthDate = document.querySelector('#birthDate')
     this.birthDate.style.fontSize = '.9rem'
+    this.roseDate = document.querySelector('#roseDate')
+    this.roseDate.style.fontSize = '.9rem'
 
 
     this.presidentLimit = new Date(2022,4,29,0)
     this.birthLimit = new Date(2021,4,10,0)
+    this.roseLimit = new Date(2021, 2, 12, 0)
 
 
     this.updatePresidentCard()
     this.updateBirthCard()
+    this.updateRoseCard()
   }
   updateBirthCard(){
-    this.update(this.birthDate, this.birthLimit)
+    this.update(this.birthDate, this.birthLimit, 'Now! Buy me a coffe ;3')
 
   }
 
   updatePresidentCard(){
-    this.update(this.presidentDate, this.presidentLimit)
+    this.update(this.presidentDate, this.presidentLimit, `Really? I must be dreaming`)
   }
 
-  update(display, limit){
+  updateRoseCard(){
+    this.update(this.roseDate, this.roseLimit, 'Out Already!')
+
+  }
+
+  update(display, limit, msgFinal){
     const interval = setInterval(() => {
        const data = this.remain(limit)   
  
        display.innerText = `${data.remainYears}y: ${data.remainMonths}m: ${data.remainDays}d: ${data.remainHours}h: ${data.remainMinutes}m: ${data.remainSecs}s`
  
        if(data.remain < 1){
-         display.innerText = `Now !`
+         display.innerText = `${msgFinal || 'Now !'}`
          clearInterval(interval)
        }
      },1000)

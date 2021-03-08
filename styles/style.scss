@@ -85,7 +85,7 @@ body {
 }
 
 .app__container {
-  min-height: 550px;
+  min-height: 600px;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -181,6 +181,11 @@ body {
 
   .petro--picture {
     width: 45px;
+    border-radius: 50%;
+  }
+  .rose {
+    width: 45px;
+    height: 50px;
     border-radius: 50%;
   }
   .details {
