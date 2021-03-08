@@ -36,7 +36,6 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
-          'sass-loader'
         ]
       }
     ]
@@ -52,6 +51,8 @@ module.exports = {
     new copyWebpackPlugin({
       patterns: [
         {from: path.resolve(__dirname, 'assets/') , to: 'assets/'},
+        {from: path.resolve(__dirname, 'styles/desktop.css') , to: 'styles/'},
+        {from: path.resolve(__dirname, 'styles/style.css') , to: 'styles/'},
         {from: path.resolve(__dirname, 'favicon.ico'), to: ''}
       ]
     }),

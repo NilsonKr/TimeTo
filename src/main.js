@@ -1,7 +1,6 @@
 import Validate from '@utils/validate.js';
 import { UpdateCard } from '@utils/remainData.js';
 import '@animate/animate.min.css'
-import '@styles/style.scss'
 
 const year = document.querySelector('#yearInput')
 const month = document.querySelector('#monthInput')

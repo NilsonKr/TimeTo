@@ -1,0 +1,38 @@
+.header h2 {
+  font-size: 3.5rem;
+}
+.explain {
+  font-size: 1.7rem;
+}
+.app .legend {
+  font-size: 2.5rem;
+}
+.app__container .app__title {
+  font-size: 1.8rem;
+}
+.form__date input {
+  max-width: 70px;
+  height: 75px;
+  font-size: 1.6rem;
+}
+.form__date input::-webkit-input-placeholder {
+  font-size: 1.6rem;
+}
+.send--button {
+  padding: 15px 20px;
+  font-size: 1.3rem;
+}
+
+.card {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.card .details h2 {
+  font-size: 1.4rem;
+}
+.card .details p {
+  font-size: 1.2rem;
+}
+.card .petro--picture {
+  width: 60px;
+}

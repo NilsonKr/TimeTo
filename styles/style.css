@@ -118,7 +118,7 @@ body {
 .form__date input::-webkit-input-placeholder {
   text-align: center;
   font-size: 1.1rem;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.7);
   font-weight: bold;
 }
 
@@ -132,6 +132,7 @@ body {
   color: #fff;
   font-size: 1.1rem;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .animation {
@@ -199,6 +200,7 @@ body {
 
 .love__card {
   padding: 10px;
+  cursor: pointer;
 }
 
 .coffe {
@@ -268,6 +270,7 @@ body {
   top: 10px;
   right: 10px;
   width: 30px;
+  cursor: pointer;
 }
 
 .modal__details img {
